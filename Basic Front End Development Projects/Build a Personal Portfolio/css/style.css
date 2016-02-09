@@ -1,14 +1,10 @@
-.header{
-  background:#150004;
-  margin-top:40px;
-}
-.header h1{
-  color:#fff;
+body{
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 .nav{
   margin:0px;
   padding-top:9px;
-  background:#BDE1D9;
+  background:#BDE1D9; 
 }
 .nav li{
   display:inline;
@@ -20,12 +16,20 @@
   color:#150004;
   padding:5px;
 }
+.header{
+  background:#150004;
+  margin-top:40px;
+}
+.header h1{
+  color:#fff;
+}
+
 .jumbotron {
   background-image:url('http://goo.gl/6Sae1N');
   height: 500px;
   background-repeat: no-repeat;
   background-size: cover;
-  postion:relative;
+  position:relative;
   margin:0px;
 }
 .jumbotron h2{
@@ -37,10 +41,10 @@
 .jumbotron p{
   color:#150004;
 }
-.portpolio{
+.portfolio{
   position:relative;
   background:#BDE1D9;
 }
-.portpolio h2{
+.portfolio h2{
   color:#150004;
 }
