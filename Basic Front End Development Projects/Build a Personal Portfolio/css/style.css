@@ -1,0 +1,46 @@
+.header{
+  background:#150004;
+  margin-top:40px;
+}
+.header h1{
+  color:#fff;
+}
+.nav{
+  margin:0px;
+  padding-top:9px;
+  background:#BDE1D9;
+}
+.nav li{
+  display:inline;
+  font-size:15px;
+  font-weight: 500;
+  padding-left: 0px;
+}
+.nav a{
+  color:#150004;
+  padding:5px;
+}
+.jumbotron {
+  background-image:url('http://goo.gl/6Sae1N');
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  postion:relative;
+  margin:0px;
+}
+.jumbotron h2{
+  color: #150004;
+  font-size: 43px;  
+  font-family: 'Shift', sans-serif;
+  font-weight: bold;
+}
+.jumbotron p{
+  color:#150004;
+}
+.portpolio{
+  position:relative;
+  background:#BDE1D9;
+}
+.portpolio h2{
+  color:#150004;
+}
