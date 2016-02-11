@@ -1,8 +1,9 @@
 body{
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-family: 'Shift', sans-serif;
 }
 .nav{
-  margin:0px;
+  margin-right:auto;
+  margin-left: auto;
   padding-top:9px;
   background:#BDE1D9; 
 }
@@ -11,6 +12,7 @@ body{
   font-size:15px;
   font-weight: 500;
   padding-left: 0px;
+  font-weight: bold;
 }
 .nav a{
   color:#150004;
@@ -34,12 +36,20 @@ body{
 }
 .jumbotron h2{
   color: #150004;
+  margin-top: 0px;
   font-size: 43px;  
   font-family: 'Shift', sans-serif;
   font-weight: bold;
+  padding-top: 0px;
 }
 .jumbotron p{
-  color:#150004;
+  margin-top: 30px;
+  margin-left: 350px;
+  color: #150004;
+  font-size: 18px;
+  text-align: right;
+  font-weight: 500;
+  width: 600px;
 }
 .portfolio{
   position:relative;
