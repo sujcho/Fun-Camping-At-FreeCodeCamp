@@ -1,39 +1,27 @@
-body{
-color: #E32817;
-}
 h1{
   font-family: 'Shift', sans-serif;
   font-size: 35px;
-  font-weight: bold;
-  //color: #E32817;
+  color: #E32817;
 }
 
-/*
 .setting{  
   padding: 20px;
   background-color: #FAFAED;
+  margin-left:auto;
+  margin-right:auto;
+  
   font-family: 'Shift', sans-serif;
   font-size: 18px;
   color: #E32817;
   text-align:center;
 }
-*/
 .setting h2{
   font-size: 25px;
-}
-.col-centered{
-    float: none;
-    margin: 0 auto;
 }
 
 .jumbotron{
   background-color: #F9E8BC;
   font-family: 'Shift', sans-serif;
   font-size: 18px;
-  height:600px;
   text-align: center;
 }
-
-.jumbotron h2{
-  font-weight: bold;
-} 
