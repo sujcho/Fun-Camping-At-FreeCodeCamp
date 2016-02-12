@@ -2,6 +2,8 @@ var breakLength = 5,
     sessionLength = 25,
     sessionTime = 0;
 
+var timer = null;
+
  $(document).ready(function() {
    breakLength = 5;
    sessionLength = 25;
@@ -13,11 +15,13 @@ $('#blMinus').on('click', function () {
     breakLength--;
     if(breakLength < 0) breakLength = 0; 
     $('#bLength').text(breakLength);
+    breakTime = breakLength * 60;
 });
 
 $('#blPlus').on('click', function () {
     breakLength++; 
     $('#bLength').text(breakLength);
+    breakTime = breakLength * 60;
 });
 
 $('#slMinus').on('click', function () {
@@ -37,12 +41,26 @@ $('#slPlus').on('click', function () {
 
 $('#start').on('click',function(){
   displayTime(sessionTime);
-  var myVar = setInterval(updateTime, 1000);
+  //for session timer
+  timer = setInterval(updateTime, 1000);
+
+});
+
+$('#pause').on('click',function(){
+  clearInterval(timer);
 });
 
 
 function updateTime() {
-  if(sessionTime < 0) clearInterval(myVar);
+  //if sessionTime is over, starts the break time
+  if(sessionTime < 0){
+    breakTime--;
+    //if break Timer is over, clear the timer
+    if(breakTime < 0){
+    clearInterval(myVar);
+    }
+  } 
+  //every 1 second, update time and reduce it.
   else{
     displayTime(sessionTime);
     sessionTime--;
