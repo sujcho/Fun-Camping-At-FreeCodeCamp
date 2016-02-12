@@ -1,9 +1,12 @@
 var breakLength = 5,
+    beakTime = 5 * 60;
     sessionLength = 25,
-    sessionTime = 0;
+    sessionTime = 25 * 60;
+
 
  $(document).ready(function() {
    breakLength = 5;
+   breakTime = breakLength * 60;
    sessionLength = 25;
    sessionTime = sessionLength * 60;
    displayTime(sessionTime);
@@ -13,11 +16,13 @@ $('#blMinus').on('click', function () {
     breakLength--;
     if(breakLength < 0) breakLength = 0; 
     $('#bLength').text(breakLength);
+    breakTime = breakLength * 60;
 });
 
 $('#blPlus').on('click', function () {
     breakLength++; 
     $('#bLength').text(breakLength);
+    breakTime = breakLength * 60; 
 });
 
 $('#slMinus').on('click', function () {
@@ -42,7 +47,10 @@ $('#start').on('click',function(){
 
 
 function updateTime() {
-  if(sessionTime < 0) clearInterval(myVar);
+  if(sessionTime < 0) 
+    breakTime--;
+    if(breakTime < 0)
+    clearInterval(myVar);
   else{
     displayTime(sessionTime);
     sessionTime--;
