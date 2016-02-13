@@ -1,27 +1,38 @@
 h1{
   font-family: 'Shift', sans-serif;
   font-size: 35px;
+  font-weight: bold;
   color: #E32817;
 }
 
-.setting{  
-  padding: 20px;
-  background-color: #FAFAED;
-  margin-left:auto;
-  margin-right:auto;
-  
-  font-family: 'Shift', sans-serif;
-  font-size: 18px;
-  color: #E32817;
-  text-align:center;
-}
-.setting h2{
+h2{
   font-size: 25px;
+  font-weight: bold;
 }
-
 .jumbotron{
   background-color: #F9E8BC;
   font-family: 'Shift', sans-serif;
   font-size: 18px;
   text-align: center;
+  color: #E32817;
+
+  height: 800px;
+}
+.show{
+  margin-top:30px;
+}
+/* centered columns styles */
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+.inner{
+  display: inline-block;
 }

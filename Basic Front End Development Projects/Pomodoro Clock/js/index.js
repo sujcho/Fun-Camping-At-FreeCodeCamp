@@ -3,8 +3,9 @@ var breakLength = 5,
     sessionLength = 25,
     sessionTime = 25 * 60;
 
+var timer = null;
 
- $(document).ready(function() {
+$(document).ready(function() {
    breakLength = 5;
    breakTime = breakLength * 60;
    sessionLength = 25;
@@ -42,15 +43,18 @@ $('#slPlus').on('click', function () {
 
 $('#start').on('click',function(){
   displayTime(sessionTime);
-  var myVar = setInterval(updateTime, 1000);
+  timer = setInterval(updateTime, 1000);
 });
 
+$('#pause').on('click',function(){
+  clearInterval(timer);
+});
 
 function updateTime() {
   if(sessionTime < 0) 
     breakTime--;
     if(breakTime < 0)
-    clearInterval(myVar);
+    clearInterval(timer);
   else{
     displayTime(sessionTime);
     sessionTime--;
