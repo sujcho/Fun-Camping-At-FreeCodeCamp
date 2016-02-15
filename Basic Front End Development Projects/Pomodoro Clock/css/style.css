@@ -17,17 +17,14 @@ h2{
   color: #E32817;
   height: 1000px;
 }
-.btn{
-  border:0px solid transparent;
-  background-color:transparent;
-  color: #E32817;
-}
-.btn:active:hover, .btn:active:focus .btn:focus:hover, .btn:focus:focus{
-  border:0px solid transparent;
-  background-color:transparent;
-  color: #E32817;
+
+.setting p{
+  width: 50px;
 }
 
+.btn{
+  color: #E32817;
+}
  
 .btn-primary {
     background-color: #0099cc;
