@@ -18,33 +18,41 @@ $(document).ready(function() {
  });
 
 
-$('#blMinus').on('click', function () {
+$('.btn-blength').on('click', function(){
+
+  if($(this).attr("id") == "blMinus"){
     breakLength--;
-    if(breakLength < 0) breakLength = 0; 
-    $('#bLength').text(breakLength);
-    breakTime = breakLength * 60;
+  }
+  else if($(this).attr("id") == "blPlus"){
+    breakLength++;
+  }
+  if(breakLength < 0) breakLength = 0; 
+  $('#bLength').html("<p>"+ breakLength + "</p>");
+  breakTime = breakLength * 60;
+
 });
 
-$('#blPlus').on('click', function () {
-    breakLength++; 
-    $('#bLength').text(breakLength);
-    breakTime = breakLength * 60; 
-});
+$('.btn-slength').on('click', function(){
 
-$('#slMinus').on('click', function () {
+  clearInterval(timer);
+
+  if($(this).attr("id") == "slMinus"){
     sessionLength--;
-    if(sessionLength < 0) sessionLength = 0; 
-    $('#sLength').text(sessionLength);
-    sessionTime = sessionLength * 60;
-    displayTime(sessionTime);
+  }
+  else if($(this).attr("id") == "slPlus"){
+    sessionLength++;
+  }
+  
+  if(sessionLength < 0) sessionLength = 0; 
+  $('#sLength').html("<p>"+ sessionLength + "</p>");
+  sessionTime = sessionLength * 60;
+  displayTime(sessionTime);
+ 
+
+  $('#progress').waterbubble({waterColor: '#E32817',txt: undefined, textColor:'#FFF', data: 0.0});
+
 });
 
-$('#slPlus').on('click', function () {
-    sessionLength++; 
-    $('#sLength').text(sessionLength);
-    sessionTime = sessionLength * 60;
-    displayTime(sessionTime);
-});
 
 $('#start').on('click',function(){
   displayTime(sessionTime);
@@ -54,25 +62,27 @@ $('#start').on('click',function(){
 
 $('#pause').on('click',function(){
   clearInterval(timer);
+
 });
 
 
 function updateTime() {
-  if(sessionTime < 0) 
+  if(sessionTime < 0) {
     breakTime--;
     if(breakTime < 0)
-    clearInterval(timer);
+      clearInterval(timer);
+  }
   else{
     displayTime(sessionTime);
     fraction = (initialSessionTime - sessionTime)/initialSessionTime;
     $('#progress').waterbubble(
       { waterColor: '#E32817',
-        txt: Math.round(fraction * 100).toString() + '%', 
-        wave: true,
-        textColor:'#FFF',
-        animation: false, 
-        data: fraction});
-    sessionTime--;
+      txt: Math.round(fraction * 100).toString() + '%', 
+      wave: true,
+      textColor:'#FFF',
+      animation: false, 
+      data: fraction});
+      sessionTime--;
   }
 }
 
@@ -81,7 +91,10 @@ function displayTime(time){
   time -= minutes * 60;
   var seconds = time;
   $('#min').text(minutes);
-  if(seconds > 0){
-  $('#sec').text(':' + seconds);
+  if(seconds < 10){
+   $('#sec').text(':0' + seconds);
+  }
+  else{
+    $('#sec').text(':' + seconds);
   }
 }
