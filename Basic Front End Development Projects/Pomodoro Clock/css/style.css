@@ -1,0 +1,61 @@
+h1{
+  font-family: 'Shift', sans-serif;
+  font-size: 35px;
+  font-weight: bold;
+  color: #E32817;
+}
+
+h2{
+  font-size: 25px;
+  font-weight: bold;
+}
+.jumbotron{
+  background-color: #F9E8BC;
+  font-family: 'Shift', sans-serif;
+  font-size: 18px;
+  text-align: center;
+  color: #E32817;
+  height: 1000px;
+}
+
+.setting p{
+  width: 50px;
+}
+
+.btn{
+  color: #E32817;
+}
+ 
+.btn-primary {
+    background-color: #0099cc;
+    font-size: 18px;
+    color: #ffffff;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.show{
+  margin-top:10px;
+}
+.show p{
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 25px;
+}
+/* centered columns styles */
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:center;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+.inner{
+  display: inline-block;
+}
