@@ -1,4 +1,3 @@
-var app_id = '&APPID='+'942f5f77f243a4c6059a46b5523bc3e1';
 var openweather = 'api.openweathermap.org/data/2.5/weather?';
 $(document).ready(function(){
      var loc = ajax_getLocInfo();
