@@ -1,3 +1,4 @@
+//need app id
 var openweather = 'api.openweathermap.org/data/2.5/weather?';
 $(document).ready(function(){
      var loc = ajax_getLocInfo();
